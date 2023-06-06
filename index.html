@@ -12,6 +12,15 @@
     <!-- <link rel="stylesheet" href="data-tree.css" /> -->
     <script src="json-xml-data-tree/json-xml-data-tree/data-tree.js"></script>
     <link rel="stylesheet" href="json-xml-data-tree/json-xml-data-tree/data-tree.css" />
+    <style>
+        .scrl {
+            position: relative;
+            height: 600px;
+            overflow: auto;
+        }
+
+        .codex-editor__redactor { padding-bottom: 30px !important; } 
+    </style>
 </head>
   <body>
     <nav class="navbar" style="background-color: #4c868f;" >
@@ -28,7 +37,7 @@
         <div class="col">
             <h4>MT</h4>
             <div class=" shadow-sm p-3 bg-body rounded">
-                <div id="editor">
+                <div  style="font-size: 12px;" class="scrl" id="editor">
                     
                 </div>
             </div>
@@ -37,7 +46,7 @@
         <div class="col">
             <h4>MX</h4>
             <div class=" shadow-sm p-3 bg-body rounded">
-                <div id="tree"></div>
+                <div class="scrl" id="tree"></div>
             </div>
         </div>
     </div>
