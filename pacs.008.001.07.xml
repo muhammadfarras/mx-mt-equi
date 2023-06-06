@@ -1,110 +1,142 @@
-<message>
-    <AppHdr xmlns='urn:iso:std:iso:20022:tech:xsd:head.001.001.01'
-            xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-        <Fr>
-            <FIId>
-                <FinInstnId>
-                    <BICFI>ABCDUS33XXX</BICFI>
-                </FinInstnId>
-            </FIId>
-        </Fr>
-        <To>
-            <FIId>
-                <FinInstnId>
-                    <BICFI>EFGHUS33XXX</BICFI>
-                </FinInstnId>
-            </FIId>
-        </To>
-        <BizMsgIdr>12312312312</BizMsgIdr>
-        <MsgDefIdr>pacs.008.001.07</MsgDefIdr>
-        <CreDt>2019-10-19T20:53:13Z</CreDt>
-        <PssblDplct>false</PssblDplct>
-    </AppHdr>
-    <Document xmlns='urn:iso:std:iso:20022:tech:xsd:pacs.008.001.07'
-              xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-        <FIToFICstmrCdtTrf>
-            <GrpHdr>
-                <MsgId>823823423</MsgId>
-                <CreDtTm>2019-10-19T21:00:45</CreDtTm>
-                <BtchBookg>false</BtchBookg>
-                <NbOfTxs>1</NbOfTxs>
-                <CtrlSum>10000</CtrlSum>
-                <TtlIntrBkSttlmAmt Ccy='USD'>10000</TtlIntrBkSttlmAmt>
-                <IntrBkSttlmDt>2019-10-28</IntrBkSttlmDt>
-                <SttlmInf>
-                    <SttlmMtd>INDA</SttlmMtd>
-                </SttlmInf>
-                <InstgAgt>
-                    <FinInstnId>
-                        <BICFI>CITTGB2LPBG</BICFI>
-                        <Nm>Lionel Messi</Nm>
-                        <Othr>
-                            <Id>2342342342</Id>
-                            <Issr>FOOISSUER</Issr>
-                        </Othr>
-                    </FinInstnId>
-                </InstgAgt>
-                <InstdAgt>
-                    <FinInstnId>
-                        <BICFI>ICBCUS4CXXX</BICFI>
-                        <Nm>Manu Ginobili</Nm>
-                        <PstlAdr>
-                            <AdrTp>PBOX</AdrTp>
-                            <Dept>1</Dept>
-                            <SubDept>DFGH</SubDept>
-                            <StrtNm>My Street</StrtNm>
-                            <BldgNb>1122</BldgNb>
-                            <PstCd>10002</PstCd>
-                            <TwnNm>Los Angeles</TwnNm>
-                            <CtrySubDvsn>ABCD</CtrySubDvsn>
-                        </PstlAdr>
-                    </FinInstnId>
-                </InstdAgt>
-            </GrpHdr>
-            <CdtTrfTxInf>
-                <PmtId>
-                    <InstrId>2233445566</InstrId>
-                    <EndToEndId>987654321987654321</EndToEndId>
-                    <TxId>123456789</TxId>
-                    <ClrSysRef>SDSDS333</ClrSysRef>
-                </PmtId>
-                <IntrBkSttlmAmt Ccy='USD'>5000</IntrBkSttlmAmt>
-                <IntrBkSttlmDt>2019-07-31</IntrBkSttlmDt>
-                <SttlmPrty>URGT</SttlmPrty>
-                <AccptncDtTm>2019-04-28T20:54:39</AccptncDtTm>
-                <PoolgAdjstmntDt>2019-04-29</PoolgAdjstmntDt>
-                <InstdAmt Ccy='USD'>5000</InstdAmt>
-                <ChrgBr>SHAR</ChrgBr>
-                <Dbtr>
-                    <Nm>Jhon Doe</Nm>
-                    <PstlAdr>
-                        <AdrTp>HOME</AdrTp>
-                        <Dept>ABCD</Dept>
-                        <SubDept>1</SubDept>
-                        <StrtNm>Foo Street</StrtNm>
-                        <BldgNb>1</BldgNb>
-                        <PstCd>1234</PstCd>
-                        <TwnNm>Buenos Aires</TwnNm>
-                        <CtrySubDvsn>CABA</CtrySubDvsn>
-                        <Ctry>AR</Ctry>
-                    </PstlAdr>
-                    <CtryOfRes>AR</CtryOfRes>
-                </Dbtr>
-                <DbtrAgt>
-                    <FinInstnId>
-                        <BICFI>ITUSUSP1XXX</BICFI>
-                        <Nm>Foo Corp</Nm>
-                    </FinInstnId>
-                </DbtrAgt>
-                <CdtrAgt>
-                    <FinInstnId>
-                        <BICFI>USTBUS31XXX</BICFI>
-                    </FinInstnId>
-                </CdtrAgt>
-                <Cdtr>
-                    <Nm>Mike Smith</Nm>
-                </Cdtr>
-            </CdtTrfTxInf>
-        </FIToFICstmrCdtTrf>
-    </Document>
-</message>
+<?xml version="1.0" encoding="UTF-8" ?>
+<Saa:DataPDU xmlns:Saa="urn:swift:saa:xsd:saa.2.0" xmlns:Sw="urn:swift:snl:ns.Sw" xmlns:SwInt="urn:swift:snl:ns.SwInt" xmlns:SwGbl="urn:swift:snl:ns.SwGbl" xmlns:SwSec="urn:swift:snl:ns.SwSec">
+	<Saa:Revision>2.0.13</Saa:Revision>
+	<Saa:Header>
+		<Saa:Message>
+			<Saa:SenderReference>ISPXAIDJAXXX103.230606132516785</Saa:SenderReference>
+			<Saa:MessageIdentifier>pacs.008.001.08</Saa:MessageIdentifier>
+			<Saa:Format>MX</Saa:Format>
+			<Saa:SubFormat>Input</Saa:SubFormat>
+			<Saa:Sender>
+				<Saa:DN>ou=xxx,o=spxaidja,o=swift</Saa:DN>
+				<Saa:FullName>
+					<Saa:X1>SPXAIDJAXXX</Saa:X1>
+				</Saa:FullName>
+			</Saa:Sender>
+			<Saa:Receiver>
+				<Saa:DN>ou=xxx,o=irvtus3n,o=swift</Saa:DN>
+				<Saa:FullName>
+					<Saa:X1>IRVTUS3NXXX</Saa:X1>
+				</Saa:FullName>
+			</Saa:Receiver>
+			<Saa:InterfaceInfo>
+				<Saa:UserReference>103.230606132516785</Saa:UserReference>
+			</Saa:InterfaceInfo>
+			<Saa:NetworkInfo>
+				<Saa:Priority>Normal</Saa:Priority>
+				<Saa:Service>swift.finplus</Saa:Service>
+				<Saa:SWIFTNetNetworkInfo>
+					<Saa:RequestType>pacs.008.001.08</Saa:RequestType>
+					<Saa:RequestSubtype>swift.cbprplus.02</Saa:RequestSubtype>
+				</Saa:SWIFTNetNetworkInfo>
+			</Saa:NetworkInfo>
+		</Saa:Message>
+	</Saa:Header>
+	<Saa:Body>
+		<AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.02">
+			<Fr>
+				<FIId>
+					<FinInstnId>
+						<BICFI>SPXAIDJAXXX</BICFI>
+					</FinInstnId>
+				</FIId>
+			</Fr>
+			<To>
+				<FIId>
+					<FinInstnId>
+						<BICFI>IRVTUS3NXXX</BICFI>
+					</FinInstnId>
+				</FIId>
+			</To>
+			<BizMsgIdr>pacs.008.001.08</BizMsgIdr>
+			<MsgDefIdr>TTSOL30022001146</MsgDefIdr>
+			<BizSvc>swift.cbprplus.02</BizSvc>
+			<CreDt>2023-06-06T13:25:14+07:00</CreDt>
+		</AppHdr>
+		<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+			<FIToFICstmrCdtTrf>
+				<GrpHdr>
+					<MsgId>TTSOL30022001146</MsgId>
+					<CreDtTm>2023-06-06T13:25:16+07:00</CreDtTm>
+					<NbOfTxs>1</NbOfTxs>
+					<SttlmInf>
+						<SttlmMtd>INDA</SttlmMtd>
+					</SttlmInf>
+				</GrpHdr>
+				<CdtTrfTxInf>
+					<PmtId>
+						<InstrId>TTSOL30022001146</InstrId>
+						<EndToEndId>NOTPROVIDED</EndToEndId>
+						<UETR>5d380c09-1689-415b-81ab-2a210afb1c2a</UETR>
+					</PmtId>
+					<PmtTpInf>
+						<SvcLvl>
+							<Cd>G </Cd>
+						</SvcLvl>
+					</PmtTpInf>
+					<IntrBkSttlmAmt Ccy="USD">71750.51</IntrBkSttlmAmt>
+					<IntrBkSttlmDt>2022-10-24</IntrBkSttlmDt>
+					<ChrgBr>DEBT</ChrgBr>
+					<InstgAgt>
+						<FinInstnId>
+							<BICFI>SPXAIDJAXXX</BICFI>
+						</FinInstnId>
+					</InstgAgt>
+					<InstdAgt>
+						<FinInstnId>
+							<BICFI>IRVTUS3NXXX</BICFI>
+						</FinInstnId>
+					</InstdAgt>
+					<Dbtr>
+						<Nm>DAN LIRIS, PT</Nm>
+						<PstlAdr>
+							<StrtNm>JL MERAPI NO 23</StrtNm>
+							<TwnNm>KAB.  SUKOHARJO</TwnNm>
+							<Ctry>ID</Ctry>
+						</PstlAdr>
+					</Dbtr>
+					<DbtrAcct>
+						<Id>
+							<Othr>
+								<Id>3006101968</Id>
+							</Othr>
+						</Id>
+					</DbtrAcct>
+					<DbtrAgt>
+						<FinInstnId>
+							<BICFI>SPXAIDJAXXX</BICFI>
+						</FinInstnId>
+					</DbtrAgt>
+					<CdtrAgt>
+						<FinInstnId>
+							<BICFI>BOTKIDJX</BICFI>
+						</FinInstnId>
+					</CdtrAgt>
+					<Cdtr>
+						<Nm>PT NISSHINBO INDONESIA</Nm>
+						<PstlAdr>
+							<StrtNm>.</StrtNm>
+							<Ctry>ID</Ctry>
+						</PstlAdr>
+					</Cdtr>
+					<CdtrAcct>
+						<Id>
+							<Othr>
+								<Id>5300875747</Id>
+							</Othr>
+						</Id>
+					</CdtrAcct>
+					<InstrForCdtrAgt>
+						<InstrInf>MUFG BANK JL JEND SUDIRMAN KAV 10-11 JAKARTA</InstrInf>
+					</InstrForCdtrAgt>
+					<InstrForNxtAgt>
+						<InstrInf>/FULLPAY/</InstrInf>
+					</InstrForNxtAgt>
+					<RmtInf>
+						<Ustrd>NIIVL080167-NIIVL080014(71750) 2097</Ustrd>
+					</RmtInf>
+				</CdtTrfTxInf>
+			</FIToFICstmrCdtTrf>
+		</Document>
+	</Saa:Body>
+</Saa:DataPDU>
