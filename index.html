@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+
+    <!-- <link rel="stylesheet" href="data-tree.css" /> -->
+    <script src="json-xml-data-tree/json-xml-data-tree/data-tree.js"></script>
+    <link rel="stylesheet" href="json-xml-data-tree/json-xml-data-tree/data-tree.css" />
+</head>
+  <body>
+    <nav class="navbar" style="background-color: #4c868f;" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:white">
+            <!-- <img src="https://www.vensys.co.id/vensys/bootstrap/images/home/Financial Data Format Transformation.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+            <b>Venturium System Indonesia</b> | <i>Dummy</i>
+          </a>
+        </div>
+      </nav>
+    
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h4>MT</h4>
+            <div class=" shadow-sm p-3 bg-body rounded">
+                <div id="editor">
+                    
+                </div>
+            </div>
+                
+        </div>
+        <div class="col">
+            <h4>MX</h4>
+            <div class=" shadow-sm p-3 bg-body rounded">
+                <div id="tree"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        new DataTree({
+            fpath: 'pacs.008.001.07.xml',
+            container: '#tree',
+            attrs:'show',
+            startExpanded: true,
+
+        });
+    </script>
+    <script>
+        const editor = new EditorJS({
+        /**
+         * Id of Element that should contain the Editor
+         */
+        holderId : 'editor',
+
+        /**
+         * Previously saved data that should be rendered
+         */
+        data: {
+            blocks:[
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: '{1:F01BICFOOYYAXXX8683497519}{2:O1031535051028ESPBESMMAXXX54237522470510281535N}{3:{113:ROMF}{108:0510280182794665}{119:STP}}{4:'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':20:0061350113089908'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':13C:/RNCTIME/1534+0000'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':23B:CRED'
+                    }
+                }
+                ,{
+                    type: 'paragraph', 
+                    data: {
+                    text: ':23E:SDVA'
+                    }
+                }
+                ,{
+                    type: 'paragraph', 
+                    data: {
+                    text: ':32A:061028EUR100000,'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':33B:EUR100000,'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':50K:/12345678'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: 'AGENTES DE BOLSA FOO AGENCIA'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: 'AV XXXXX 123 BIS 9 PL'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: '12345 BARCELONA'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':52A:/2337'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: 'FOOAESMMXXX'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':53A:FOOAESMMXXX'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':57A:BICFOOYYXXX'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':59:/ES0123456789012345671234'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: 'FOO AGENTES DE BOLSA ASOC'
+                    }
+                }
+                ,
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':71A:OUR'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: ':72:/BNF/TRANSF. BCO. FOO'
+                    }
+                },
+                {
+                    type: 'paragraph', 
+                    data: {
+                    text: '-}{5:{MAC:88B4F929}{CHK:22EF370A4073}}'
+                    }
+                }
+            ]
+        }
+        });
+
+    </script>
+</body>
+</html>
